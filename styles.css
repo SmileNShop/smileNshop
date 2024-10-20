@@ -1,0 +1,1121 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf0b7;
+    color: #000;
+}
+
+/* Header Styling */
+header {
+    background-color: #f8c32d;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and navigation */
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Links Styling */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: 50px;  /* Adjust this for spacing in landscape */
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+/* User Authentication Section */
+.user-auth {
+    display: flex;
+    align-items: center;
+}
+
+/* Login/Register Icon */
+.login-register i {
+    color: #000;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.login-register i:hover {
+    color: #f68b1f;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive Styling */
+/* General styling for the cart and user-auth section */
+.user-auth {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds spacing between items */
+}
+
+.cart-icon {
+    font-size: 1.5em;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Portrait Mode (default mobile view) */
+@media (max-width: 768px) {
+    .user-auth {
+        justify-content: flex-end;
+        gap: 5px; /* Reduce gap in portrait mode */
+    }
+
+    .cart-icon {
+        order: 2; /* Cart between profile and hamburger */
+    }
+
+    .login-register {
+        order: 1; /* Profile icon first */
+    }
+
+    .hamburger {
+        order: 3; /* Hamburger last */
+        margin-left: 10px;
+    }
+}
+
+/* Landscape Mode (wider screens) */
+@media (min-width: 769px) {
+    .user-auth {
+        justify-content: flex-end; /* Align items towards the end */
+        gap: 15px; /* Add more space between items */
+    }
+
+    .cart-icon {
+        order: 2; /* Cart between navigation and profile */
+        margin-left: 10px;
+    }
+
+    .login-register {
+        order: 3; /* Profile icon stays to the right */
+    }
+
+    .hamburger {
+        order: 4; /* Hamburger last */
+        margin-left: 0; /* Reduce unnecessary margin */
+    }
+
+    /* Adjusting the nav-links to give space to the cart */
+    nav .nav-links {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+/* Landscape Mode */
+@media (min-width: 769px) {
+    .user-auth {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    /* Add space between login/register and navigation */
+    .login-register {
+        margin-right: 30px; /* Adjust for spacing */
+    }
+
+    .nav-links {
+        display: flex;
+    }
+}
+
+.logo-img {
+    max-width: 80px;  /* Resizes the logo */
+    height: auto;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end; /* Aligns the navigation to the right */
+}
+
+/* Navigation Links Styling */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;  /* Space between links */
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f68b1f;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;  /* Hide the hamburger by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;  /* Hide links initially on small screens */
+        flex-direction: column;
+        background-color: #f8c32d;  /* Same as header background */
+        position: absolute;
+        top: 100px;  /* Below the header */
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;  /* Show links when hamburger is clicked */
+    }
+
+    .hamburger {
+        display: block;  /* Show hamburger on small screens */
+    }
+
+    .nav-links li {
+        margin: 10px 0;  /* Add space between items in the mobile menu */
+    }
+}
+
+/* Style for Product Descriptions */
+.product-desc {
+    font-size: 0.7rem;
+    color: #d3d3d3;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* Hero Section */
+.hero {
+    background: #fdf0b7;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero .highlight {
+    color: #f68b1f;
+    font-weight: bolder;
+}
+
+        /* cta-button */
+        .cta-button {
+    background-color: darkorange; /* Change to your desired color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: orange; /* Change to your desired hover color */
+}
+
+/* Popular Products Section */
+#popular-products {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center; /* Center product grid */
+    flex-wrap: wrap;
+    gap: 20px; /* Space between products */
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+.product-item a{
+    text-decoration: none;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f8c32d;
+    text-align: center;
+    padding: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Product Categories Section */
+#categories {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fdf0b7;
+}
+
+.categories-grid {
+    display: flex;
+    justify-content: center; /* Center category grid */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.category-item {
+    background-color: #f68b1f;
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.category-item:hover {
+    background-color: #ff9800;
+}
+
+/* Additional Section Styling for Cosmetics and More */
+.products-section {
+    padding: 40px 20px;
+    background-color: #fdf0b7;
+}
+
+.product-category h3 {
+    color: #f68b1f;
+    font-size: 24px;
+}
+
+.product-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-category ul li {
+    padding: 5px 0;
+    font-size: 18px;
+}
+
+/* Styling for "Coming Soon" sections */
+#electronics, #home-appliances, #fashion {
+    background-color: #fff8e1;
+    padding: 20px;
+    text-align: center;
+}
+
+#electronics h2, #home-appliances h2, #fashion h2 {
+    color: #f68b1f;
+}
+
+#electronics h3, #home-appliances h3, #fashion h3 {
+    color: #888;
+    font-style: italic;
+}
+
+/* Product Images */
+.product-list {
+    display: flex;
+    justify-content: center; /* Center product list */
+    flex-wrap: wrap;
+    gap: 20px; /* Space between product items */
+}
+
+.product-item {
+    text-align: center;
+    width: 200px; /* Adjust as needed */
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+}
+
+.product-item p {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* General Styling for Categories */
+.category-title {
+    color: #f68b1f;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Horizontal Slider Styling */
+.category-slider {
+    display: flex;
+    overflow-x: auto;  /* Allows horizontal scroll */
+    gap: 15px;
+    scroll-snap-type: x mandatory;  /* Enables snapping behavior */
+    padding: 15px;
+    scrollbar-width: none;  /* Hides scrollbar in Firefox */
+}
+
+.category-slider::-webkit-scrollbar {
+    display: none;  /* Hides scrollbar in WebKit browsers (Chrome, Safari) */
+}
+
+/* Individual Category Items */
+/* Base styles for category items */
+.category-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px; /* Adjust height as needed */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+    border-radius: 10px;
+    margin-bottom: 15px; /* Spacing between items */
+    overflow: hidden; /* Hide overflow to ensure image cropping */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Ensure the background image covers the entire area */
+.category-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    z-index: 0; /* Make sure background image is behind the text */
+    filter: brightness(0.7); /* Optional: Darken the image for better text readability */
+}
+
+/* Make the text appear on top of the background */
+.category-item h3 {
+    z-index: 1; /* Ensure text is on top of the image */
+}
+
+/* Specific background images for each category */
+.cosmetics::before {
+    background-image: url('images/cosmetics-bg.jpeg'); /* Use your own image paths */
+}
+
+.fashion::before {
+    background-image: url('images/fashion-bg.jpeg');
+}
+
+.electronics::before {
+    background-image: url('images/electronics-bg.jpg');
+}
+
+.home-appliances::before {
+    background-image: url('images/home-appliances-bg.jpg');
+}
+
+.skincare::before {
+    background-image: url('images/skincare-bg.jpg');
+}
+/* Hover Effect */
+.category-item:hover {
+    background-color: #f68b1f;
+    color: #fff;
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+.product-item .product-desc {
+    font-size: 0.7rem; /* Smaller font size */
+    color: #aaaaaa; /* Lighter grey color */
+    margin-top: 5px; /* Space between the product name and description */
+    line-height: 1.4; /* Adjust line spacing for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-item {
+        min-width: 150px; /* Adjust width for smaller screens */
+        padding: 15px;
+    }
+
+    .category-item h3 {
+        font-size: 18px; /* Slightly smaller font size for mobile */
+    }
+}
+
+/* Update Cosmetic Product Title */
+.category-title {
+    font-family: 'Montserrat', sans-serif; /* Use the same font as the hero section */
+    color: #f68b1f;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold; /* Make the heading bold like the hero section */
+    margin-bottom: 20px;
+}
+
+/* Remove Hover Animation on Product Click */
+.product-item {
+    width: 220px; /* Consistent width */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Keep background color transition but remove the hover zoom */
+}
+
+/* No hover animation on click */
+.product-item:active {
+    transform: none; /* Disable scaling effect when clicked */
+}
+
+/* Styling for Product Text */
+.product-item p {
+    font-size: 18px; /* Large and bold text */
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Product Image */
+.product-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Product Page Styles */
+.product-page {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.product-image-gallery {
+    flex: 1;
+}
+
+.product-image-gallery img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h1 {
+    font-size: 36px;
+    color: #f68b1f;
+    margin-bottom: 20px;
+}
+
+.product-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+
+.product-price {
+    font-size: 28px;
+    color: blue;
+    margin-bottom: 20px;
+}
+
+.buy-button {
+    padding: 10px 20px;
+    background-color: green;
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.buy-button:hover {
+    background-color: darkgreen;
+}
+
+/* Video Preview Section */
+.video-preview {
+    margin: 30px 0;
+}
+
+.video-preview h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.video-preview iframe {
+    width: 100%;
+    height: 400px;
+}
+
+/* Reviews Section */
+.reviews {
+    margin-top: 50px;
+}
+
+.reviews h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.review-item {
+    background-color: #fdf0b7;
+    padding: 20px;
+    margin-bottom: 20px;
+    
+}    
+
+.review-item p {
+    font-size: 16px;
+}
+
+.review-item .review-rating {
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.review-item .reviewer-name {
+    font-weight: 600;
+}
+/* Rating Section */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.rating-stars {
+    font-size: 24px;
+    color: #ff9800;
+}
+
+.rating-overview {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Reviews Section */
+.reviews {
+    margin-top: 50px;
+}
+
+.reviews h2 {
+    font-size: 24px;
+    color: #f68b1f;
+    margin-bottom: 20px;
+}
+
+.review-item {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-item .review-rating {
+    color: #ff9800;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.review-item p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.review-item .reviewer-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+    }
+
+    .product-image-gallery img {
+        margin-bottom: 15px;
+    }
+
+    .video-preview iframe {
+        height: 250px;
+    }
+
+    .buy-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .rating-stars {
+        font-size: 20px;
+    }
+
+    .rating-overview {
+        font-size: 14px;
+    }
+
+    .reviews h2 {
+        font-size: 20px;
+    }
+
+    .review-item p {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .social-links a {
+        font-size: 14px;
+    }
+}
+
+/* Styling the Review Form */
+.submit-review {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit-review h2 {
+    font-size: 24px;
+    color: #f68b1f;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.rating-input {
+    display: flex;
+    flex-direction: row-reverse; /* Set to row for left alignment */
+    justify-content: flex-end; /* Align stars to the left */
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.rating-input input[type="radio"] {
+    display: none;
+}
+
+.rating-input label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* Highlight stars up to the clicked star */
+.rating-input input[type="radio"]:checked ~ label,
+.rating-input label:hover,
+.rating-input label:hover ~ label {
+    color: #ff9800;
+}
+
+/* Highlight stars in the correct order when hovering */
+.rating-input input[type="radio"]:checked ~ label ~ label {
+    color: #ff9800;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: vertical;
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #f68b1f;
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff9800;
+}
+
+.form-message {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #f68b1f;
+}
+
+/* Search Bar Section */
+.search-section {
+    padding: 30px 0; /* Space around the search bar */
+    text-align: center; /* Center the search bar */
+    background-color: #fdf0b7; /* Same as hero section background */
+}
+
+.search-bar {
+    width: 80%;
+    max-width: 600px;
+    padding: 12px 19px; /* Comfortable padding */
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #333; /* Dark text for readability */
+    background-color: #fff; /* White background for input */
+    outline: none; /* Remove default outline */
+}
+
+/* Search bar focus effect */
+.search-bar:focus {
+    border-color: #f68b1f; /* Keep the border color same as the original */
+}
+
+/* Adjust search bar style on mobile */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 90%; /* Full width on mobile */
+    }
+}
+
+/* Slideshow Wrapper */
+.slideshow-wrapper {
+    max-width: 1200px; /* Set the same max width as the product section */
+    margin: 0 auto; /* Center the slideshow */
+    padding: 20px; /* Add padding around the slideshow */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%; /* Make the slideshow take full width of the wrapper */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Image Container */
+.image-container {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #f68b1f;
+}
+
+/* Add to Cart Button Styles */
+.add-to-cart-btn {
+    background-color: green; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Top/bottom and left/right padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+    display: inline-flex; /* Aligns icon and text */
+    align-items: center; /* Vertically center align icon and text */
+}
+
+.add-to-cart-btn i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.add-to-cart-btn:hover {
+    background-color: darkgreen; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
+}
+
+/* hamburger product */
+.nav-links li a.active {
+    background-color: #f8c32d;
+}
+
+/* Update Cosmetic Product Title */
+.category-title {
+    font-family: 'Montserrat', sans-serif; /* Use the same font as the hero section */
+    color: #f68b1f; /* Accent color for titles */
+    font-weight: 600; /* Set a bold font-weight to match the hero styling */
+}
+
+/* Modal Grid for Fashion Options */
+.fashion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px; /* Spacing between grid items */
+    margin-top: 20px;
+}
+
+/* Individual grid items */
+.grid-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Overlay Text */
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 10% auto; /* 10% from the top, center aligned */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Can be adjusted */
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: red;
+}
+
+/* Grid for images in the modal */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Applying the Comic Font and Padding */
+        .about-section {
+            padding: 20px;
+            text-align: justify;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        h1, h2 {
+            font-family: 'Comic Neue', sans-serif;
+            font-weight: bold;
+        }
+        .hero p, .about-section p {
+            padding: 10px 0;
+        }
+        
+        /* Applying padding, font, and alignment */
+        .contact-section {
+            padding: 20px;
+            text-align: justify;
+        }
+        h1, h2 {
+            font-family: 'Comic Neue', sans-serif;
+            font-weight: bold;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+        .contact-form label {
+            font-weight: bold;
+            padding: 10px 0 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Comic Neue', sans-serif;
+            font-size: 16px;
+        }
+        .contact-form textarea {
+            resize: vertical;
+        }
+        .contact-form button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Comic Neue', sans-serif;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+        .business-info, .social-section {
+            padding: 20px;
+            text-align: center;
+        }
+        .social-section a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 24px;
+        }
+
+/* Adding Comic Neue as the primary font */
+        body, h1, h2, h3, p {
+            font-family: 'Comic Neue', sans-serif;
+            font-weight: bold; /* Making it bold by default */
+        }
+        

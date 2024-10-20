@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product details for Face Mask at Smile and Shop.">
+    <title>Smile and Shop - Products</title>
+    <!-- Linking the common stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importing Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Smile and Shop Logo" class="logo-img">
+        </div>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- User and Cart Icons -->
+        <div class="user-auth">
+            <a href="#cart" class="cart-icon">🛒</a>
+            <a href="#login" class="login-register">
+                <i class="fas fa-user-circle fa-2x"></i>
+            </a>
+            <!-- Hamburger Menu for Mobile -->
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </div>
+    </header>
+
+<!-- Main Product Page Content -->
+<div class="product-page">
+    <!-- Product Details -->
+    <div class="product-details">
+        <!-- Image Gallery -->
+        <div class="product-image-gallery">
+            <img src="images/face-mask-large.jpeg" alt="Face Mask">
+            <!-- Add more images as needed -->
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+            <h1>Face Mask</h1>
+            <p>Our face masks are made with soft, breathable fabric and provide excellent protection. Designed for everyday comfort and easy breathing.</p>
+            <p class="product-price">$19.99/-</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <button class="buy-button" style="font-family: 'Comic Neue', sans-serif;">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Video Preview Section -->
+    <div class="video-preview">
+        <h2>Product Preview</h2>
+        <!-- Embed a YouTube video or similar product review video -->
+        <iframe src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
+    </div>
+    
+    <!-- slides -->
+    <div class="slideshow-container">                
+    <div class="mySlides fade">
+        <img src="slides/image1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="slides/image2.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="slides/image3.jpeg" style="width:100%">
+    </div>
+
+    <!-- Navigation Buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Dots for Indicators -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+
+    <!-- Rating Section -->
+    <div class="rating">
+        <div class="rating-stars">
+            ★★★★☆
+        </div>
+        <div class="rating-overview">
+            4.5 out of 5 stars (120 reviews)
+        </div>
+    </div>
+    
+    <!-- Rating and Comment Submission Form -->
+<div class="submit-review">
+    <h2>Submit Your Review</h2>
+    <form id="reviewForm">
+        <label for="rating">Your Rating:</label>
+        <div class="rating-input">
+    <input type="radio" id="star1" name="rating" value="1" />
+    <label for="star1" title="1 stars">★</label>
+    
+    <input type="radio" id="star2" name="rating" value="2" />
+    <label for="star2" title="2 stars">★</label>
+    
+    <input type="radio" id="star3" name="rating" value="3" />
+    <label for="star3" title="3 stars">★</label>
+    
+    <input type="radio" id="star4" name="rating" value="4" />
+    <label for="star4" title="4 stars">★</label>
+    
+    <input type="radio" id="star5" name="rating" value="5" />
+    <label for="star5" title="5 star">★</label>
+</div>
+
+        <label for="comment">Your Comment:</label>
+        <textarea id="comment" name="comment" rows="5" placeholder="Write your review here..."></textarea>
+
+        <button type="submit" class="submit-btn">Submit Review</button>
+    </form>
+
+    <div id="formMessage" class="form-message"></div>
+</div>
+
+    <!-- Reviews Section -->
+    <div class="reviews">
+        <h2>Customer Reviews</h2>
+
+        <!-- Review Item 1 -->
+        <div class="review-item">
+            <div class="review-rating">
+                ★★★★★
+            </div>
+            <p>"This face mask is super comfortable and breathable. I wear it all day!"</p>
+            <p class="reviewer-name">- Sarah J.</p>
+        </div>
+
+        <!-- Review Item 2 -->
+        <div class="review-item">
+            <div class="review-rating">
+                ★★★★☆
+            </div>
+            <p>"Good quality, but I wish they had more colors."</p>
+            <p class="reviewer-name">- Mark T.</p>
+        </div>
+
+        <!-- Add more reviews as needed -->
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>© 2024 Smile and Shop. All rights reserved.</p>
+    <div class="social-links">
+        <a href="#facebook">Facebook</a> | <a href="#instagram">Instagram</a>
+    </div>
+</footer>
+
+<!-- JavaScript to toggle navigation for mobile view -->
+<script>
+    function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    
+    document.getElementById('reviewForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get rating and comment values
+        const rating = document.querySelector('input[name="rating"]:checked');
+        const comment = document.getElementById('comment').value.trim();
+
+        // Basic form validation
+        if (!rating) {
+            document.getElementById('formMessage').textContent = "Please select a rating.";
+            return;
+        }
+
+        if (comment === "") {
+            document.getElementById('formMessage').textContent = "Please write a comment.";
+            return;
+        }
+
+        // If everything is valid, show a success message (this can be replaced by an actual submission)
+        document.getElementById('formMessage').textContent = "Thank you for your review!";
+        document.getElementById('formMessage').style.color = "#28a745";
+
+        // Optional: Clear the form after submission
+        document.getElementById('reviewForm').reset();
+    });
+    
+    <!-- slides -->
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) {slideIndex = 1} // Wrap around if greater than number of slides
+    if (n < 1) {slideIndex = slides.length} // Wrap around if less than 1
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  // Hide all slides
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", ""); // Remove active class from all dots
+    }
+
+    slides[slideIndex - 1].style.display = "block"; // Show current slide
+    dots[slideIndex - 1].className += " active"; // Set the current dot as active
+}
+</script>
+
+</body>
+</html>

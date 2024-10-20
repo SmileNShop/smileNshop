@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Smile and Shop</title>
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+
+<header>
+    <div class="admin-header">
+        <h1>Admin Panel - Smile and Shop</h1>
+        <nav>
+            <ul class="admin-nav">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#products">Manage Products</a></li>
+                <li><a href="#orders">Orders</a></li>
+                <li><a href="#users">Users</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <div class="dashboard-summary">
+            <div class="summary-item">
+                <h3>Total Sales</h3>
+                <p>$10,000</p>
+            </div>
+            <div class="summary-item">
+                <h3>Orders</h3>
+                <p>120</p>
+            </div>
+            <div class="summary-item">
+                <h3>Registered Users</h3>
+                <p>300</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manage Products Section -->
+    <section id="products">
+        <h2>Manage Products</h2>
+        <a href="add-product.html">
+        <button class="add-product-btn">Add New Product</button>
+        </a>
+        <div class="product-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable">
+                    <!-- Product items will be added dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Orders Section -->
+    <section id="orders">
+        <h2>Orders</h2>
+        <div class="order-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Product</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="orderTable">
+                    <!-- Order items will be added dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Users Section -->
+    <section id="users">
+        <h2>Registered Users</h2>
+        <div class="user-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable">
+                    <!-- User details will be added dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Settings Section -->
+    <section id="settings">
+        <h2>Settings</h2>
+        <div class="settings-form">
+            <form>
+                <label for="site-name">Website Name:</label>
+                <input type="text" id="site-name" value="Smile and Shop">
+
+                <label for="admin-email">Admin Email:</label>
+                <input type="email" id="admin-email" value="admin@smileandshop.com">
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 Admin Panel - Smile and Shop</p>
+</footer>
+
+<script src="admin.js"></script>
+</body>
+</html>

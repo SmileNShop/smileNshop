@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile and Shop</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Importing the Bold Comic Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Add Cart Icon in Header -->
+<!-- Updated Header Section -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Logo" class="logo-img">
+    </div>
+
+    <!-- Navigation Links -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login/Register Section with Cart and Hamburger Menu -->
+    <div class="user-auth">
+        <a href="#cart" class="cart-icon">🛒</a>
+        <a href="#login" class="login-register">
+            <i class="fas fa-user-circle fa-2x"></i>
+        </a>        
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+    </div>
+</header>
+<!-- Main Content -->
+<main>
+    <!-- Hero Section -->
+<section class="hero">
+    <h1>Welcome to <span class="highlight">Smile and Shop</span></h1>
+    <p style>Shop your favorite products with a smile!</p>
+    <button class="cta-button">Shop Now!</button>
+</section>
+
+<!-- Search Bar Section (Below Hero and Above Popular Products) -->
+<section class="search-section">
+    <input type="text" class="search-bar" placeholder="Search for products...">
+</section>
+
+<!-- Updated Product Categories Section -->
+<section id="categories" class="products-section">
+    <h2 class="category-title">Explore Our Categories</h2>
+    <div class="category-slider">
+        <a href="cosmetics.html" class="category-item cosmetics">
+            <h3>Cosmetics</h3>
+        </a>
+        <a href="#" class="category-item fashion">
+            <h3>Fashion</h3>
+        </a>
+        <a href="electronics.html" class="category-item electronics">
+            <h3>Electronics</h3>
+        </a>
+        <a href="home-appliances.html" class="category-item home-appliances">
+            <h3>Home Appliances</h3>
+        </a>
+        <a href="skincare.html" class="category-item skincare">
+            <h3>Skincare</h3>
+        </a>
+        <!-- Add more categories as needed -->
+    </div>
+</section>
+
+<!-- slide show -->
+<div class="slideshow-wrapper">
+    <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides fade">
+            <div class="image-container">
+                <img src="slides/image1.jpg" alt="Slide 1">
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="image-container">
+                <img src="slides/image2.png" alt="Slide 2">
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="image-container">
+                <img src="slides/image3.jpeg" alt="Slide 3">
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Dots for Indicators -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+</div>
+
+<!-- Popular Products Section -->
+<section id="popular-products" class="popular-products-section">
+    <h2>Popular Products</h2>
+
+    <div class="product-list">
+        <div class="product-item">
+            <a href="facemasks.html">
+                <img src="images/face-mask.jpg" alt="Face Mask" class="product-img">
+                <p>Face Masks</p>
+            </a>
+            <p class="product-desc">Protect yourself with our breathable face masks.</p>
+            <p class="product-price" style="color: blue;">$19.99/-</p>
+            <!-- Add to Cart Button -->
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="images/lipstick.png" alt="Lipstick" class="product-img">
+            <p>Lipstick</p>
+            <p class="product-desc">Enhance your beauty with long-lasting vibrant shades.</p>
+            <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="images/shampoo.jpeg" alt="Shampoo" class="product-img">
+            <p>Shampoo</p>
+            <p class="product-desc">Revitalize your hair with nourishing shampoo.</p>
+            <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="images/perfume.jpg" alt="Perfume" class="product-img">
+            <p>Perfume</p>
+            <p class="product-desc">Smell great all day with our premium fragrances.</p>
+            <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+        <section class="about-section">
+            <h2 class="category-title">Why Choose Us?</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <i class="fas fa-tshirt fa-3x"></i>
+                    <h3>Latest Beauty & Fashion Trends</h3>
+                    <p>Stay ahead of the curve with our carefully curated selection of beauty and apparel items that reflect the latest trends in the industry.</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fas fa-shipping-fast fa-3x"></i>
+                    <h3>Fast & Reliable Shipping</h3>
+                    <p>We partner with top-tier shipping providers to ensure that your orders are delivered swiftly and securely.</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fas fa-tags fa-3x"></i>
+                    <h3>Affordable Prices</h3>
+                    <p>Enjoy high-quality beauty and fashion products without breaking the bank. We negotiate directly with manufacturers to offer you the best prices.</p>
+                </div>
+            </div>
+        </section>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <p>© 2024 Smile and Shop. All rights reserved.</p>
+    <div class="social-links">
+        <a href="#facebook">
+            <i class="fab fa-facebook"></i>
+            Facebook
+            </a> | <a href="#instagram">
+                <i class="fab fa-instagram"></i>
+                Instagram
+                </a>
+    </div>
+</footer>
+
+<!-- Script for hamburger functionality -->
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        const userAuth = document.querySelector('.user-auth');
+        
+        if (navLinks && userAuth) {
+            navLinks.classList.toggle('show');
+            userAuth.classList.toggle('show');
+        } else {
+            console.error('Elements not found.');
+        }
+    }
+// Function to close menu when clicking or scrolling outside
+function closeMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const userAuth = document.querySelector('.user-auth');
+
+    // Check if the menu is open
+    if (navLinks.classList.contains('show')) {
+        navLinks.classList.remove('show');
+        userAuth.classList.remove('show');
+    }
+}
+
+// Add event listeners to the document body
+document.addEventListener('click', function(event) {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Check if the click is outside the menu and hamburger icon
+    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+        closeMenu();
+    }
+});
+
+// Add scroll event listener
+window.addEventListener('scroll', closeMenu);
+
+<!-- slide -->
+    let slideIndex = 1;
+    let autoSlideInterval;
+    showSlides(slideIndex);
+    startAutoSlide();
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+        resetAutoSlide();
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+        resetAutoSlide();
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            plusSlides(1);
+        }, 5000);
+    }
+
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+    
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the modal
+    const modal = document.getElementById("category-modal");
+
+    // Get the element that opens the modal (Fashion category item)
+    const fashionCategory = document.querySelector(".fashion");
+
+    // Get the close button
+    const closeBtn = document.querySelector(".close");
+
+    if (fashionCategory) {
+        // When the user clicks on the Fashion category, open the modal
+        fashionCategory.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            modal.style.display = "block";
+        });
+    } else {
+        console.error('Fashion category element not found.');
+    }
+
+    if (closeBtn) {
+        // When the user clicks on <span> (x), close the modal
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+    } else {
+        console.error('Close button element not found.');
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
+<!-- cta-button -->
+const ctaButton = document.querySelector('.cta-button');
+
+ctaButton.addEventListener('click', () => {
+    // Scroll to top
+    window.scrollTo({ top: 1450, behavior: 'smooth' });
+
+    // OR Scroll to a specific section (replace '#target-section' with your section's ID)
+    // document.querySelector('#target-section').scrollIntoView({ behavior: 'smooth' });
+});
+
+</script>
+
+<!-- Add this modal structure at the end of your body (before closing body tag) -->
+<div id="category-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Fashion</h2>
+        <p>Explore the latest trends and styles in fashion.</p>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="images/fashion1.jpg" alt="Fashion Item 1">
+                <p>Women's Fashion</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/fashion2.jpg" alt="Fashion Item 2">
+                <p>Men's Fashion</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/fashion3.jpg" alt="Fashion Item 3">
+                <p>Kids' Fashion</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/fashion4.jpg" alt="Fashion Item 4">
+                <p>Accessories</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="category-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Fashion</h2>
+        <p>Explore the latest trends and styles in fashion.</p>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="images/fashion1.jpg" alt="Fashion Item 1">
+                <p>Women's Fashion</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/fashion2.jpg" alt="Fashion Item 2">
+                <p>Men's Fashion</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/fashion3.jpg" alt="Fashion Item 3">
+                <p>Kids' Fashion</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/fashion4.jpg" alt="Fashion Item 4">
+                <p>Accessories</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

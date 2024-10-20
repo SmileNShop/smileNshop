@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile and Shop</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Importing the Bold Comic Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Smile and Shop Logo" class="logo-img">
+        </div>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- User and Cart Icons -->
+        <div class="user-auth">
+            <a href="#cart" class="cart-icon">🛒</a>
+            <a href="#login" class="login-register">
+                <i class="fas fa-user-circle fa-2x"></i>
+            </a>
+            <!-- Hamburger Menu for Mobile -->
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </div>
+    </header>
+    <!-- Product Categories Section -->
+    <main>
+        <!-- search bar -->
+        <section class="search-section">
+    <input type="text" class="search-bar" placeholder="Search for products...">
+</section>
+        <!-- Cosmetics Section -->
+        <section id="cosmetics" class="products-section">
+            <h2>Our Cosmetic Products</h2>
+            <div class="product-category">
+                <h3>Skincare</h3>
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="images/cleanser.jpg" alt="Cleanser" class="product-img">
+                        <p>Cleansers</p>
+                  <p class="product-desc">Smell great all day with our premium fragrances.</p> <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/toner.jpg" alt="Toner" class="product-img">
+                        <p>Toners</p>
+                         <p class="product-desc">Smell great all day with our premium fragrances.</p> <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/serum.jpg" alt="Serum" class="product-img">
+                        <p>Serums</p>
+                         <p class="product-desc">Smell great all day with our premium fragrances.</p> <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/moisturizer.jpg" alt="Moisturizer" class="product-img">
+                        <p>Moisturizers</p>
+                         <p class="product-desc">Smell great all day with our premium fragrances.</p> <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3>Makeup</h3>
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="images/foundation.jpg" alt="Foundation" class="product-img">
+                        <p>Foundation</p>
+                         <p class="product-desc">Smell great all day with our premium fragrances.</p> <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/lipstick.jpg" alt="Lipstick" class="product-img">
+                        <p>Lipstick</p>
+                         <p class="product-desc">Smell great all day with our premium fragrances.</p> <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/mascara.jpg" alt="Mascara" class="product-img">
+                        <p>Mascara</p>
+                         <p class="product-desc">Smell great all day with our premium fragrances.</p> <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3>Haircare</h3>
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="images/shampoo.jpg" alt="Shampoo" class="product-img">
+                        <p>Shampoo</p>
+                         <p class="product-desc">Smell great all day with our premium fragrances.</p> <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/conditioner.jpg" alt="Conditioner" class="product-img">
+                        <p>Conditioners</p>
+                         <p class="product-desc">Smell great all day with our premium fragrances.</p>
+                         <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/hair-oil.jpg" alt="Hair Oil" class="product-img">
+                        <p>Hair Oils</p>
+                         <p class="product-desc">Smell great all day with our premium fragrances.</p>
+                         <p class="product-price" style="color: blue;">$19.99/-</p>
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Electronics Section -->
+        <section id="electronics" class="products-section">
+            <h2>Our Electronics Products</h2>
+            <div class="product-category">
+                <h3>Coming Soon!</h3>
+            </div>
+        </section>
+
+        <!-- Home Appliances Section -->
+        <section id="home-appliances" class="products-section">
+            <h2>Our Home Appliances Products</h2>
+            <div class="product-category">
+                <h3>Coming Soon!</h3>
+            </div>
+        </section>
+
+        <!-- Fashion Section -->
+        <section id="fashion" class="products-section">
+            <h2>Our Fashion Products</h2>
+            <div class="product-category">
+                <h3>Coming Soon!</h3>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Smile and Shop. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#facebook">Facebook</a> | <a href="#instagram">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Script for hamburger functionality -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+        // Function to close menu when clicking or scrolling outside
+function closeMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const userAuth = document.querySelector('.user-auth');
+
+    // Check if the menu is open
+    if (navLinks.classList.contains('show')) {
+        navLinks.classList.remove('show');
+        userAuth.classList.remove('show');
+    }
+}
+
+// Add event listeners to the document body
+document.addEventListener('click', function(event) {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Check if the click is outside the menu and hamburger icon
+    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+        closeMenu();
+    }
+});
+
+// Add scroll event listener
+window.addEventListener('scroll', closeMenu);
+
+    </script>
+
+</body>
+</html>
